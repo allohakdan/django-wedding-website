@@ -196,6 +196,22 @@ header {
     background-image: url('../images/hiking.jpg');
 }
 
+#why-header {
+    background-image: url('../images/hiking.jpg');
+}
+
+#when-header {
+    background-image: url('../images/hiking.jpg');
+}
+
+#where-header {
+    background-image: url('../images/hiking.jpg');
+}
+
+#how-header {
+    background-image: url('../images/hiking.jpg');
+}
+
 header .header-content {
     position: relative;
     width: 100%;
