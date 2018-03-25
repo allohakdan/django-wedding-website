@@ -62,32 +62,7 @@
             </div>
         </div>
     </header>
-    <section class="bg-info" id="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome!</h2>
-                    <hr>
-                    <p>
-                        Hello friends and family! It's the week of the wedding!
-                    </p>
-                    <p>
-                        If you're looking for information about the event, look no further!
-                        Please see below for all the details regarding <a href="#event" class="page-scroll">Friday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Saturday's event</a>.
-                    </p>
-                    <p>
-                        To get added to the wedding whatsapp group first create an account and then send an
-                        email to <a href="mailto:whatsapp@coryandro.com">whatsapp@coryandro.com</a>.
-                        Also, the current front-runner for the wedding hashtag (if you're into that sort of thing) is #getlukky.
-                    </p>
-                    <p>
-                        Looking forward to seeing everyone soon!
-                    </p>
-                    <p class="pull-right">- Cory and Rowena</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section class="no-padding" id="navigation">
         <div class="container-fluid">
             <div class="row no-gutter">
@@ -130,40 +105,19 @@
             </div>
         </div>
     </section>
-    {% include 'partials/event.html' %}
-    <section id="niagara">
-        {% include 'partials/niagara.html' %}
+        <section id="venue">
+        {% include 'partials/venue.html' %}
     </section>
-{% comment %}
-        {% include 'partials/wedding-party.html' %}
-{% endcomment %}
-    <section id="other-stuff" class="bg-primary">
-        {% include 'partials/misc.html' %}
+    <section id="hotels">
+        {% include 'partials/hotels.html' %}
     </section>
-    <section id="gifts">
-        {% include 'partials/gifts.html' %}
+    <section id="transport">
+        {% include 'partials/transport.html' %}
     </section>
-    <section id="story" class="bg-dark">
-        {% include 'partials/story.html' %}
+    <section id="st-louis">
+        {% include 'partials/st-louis.html' %}
     </section>
-    {% include 'partials/proposal.html' %}
-    {% include 'partials/save-the-dates.html' %}
-    <section id="contact" class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Contact us!</h2>
-                    <hr class="primary">
-                    <p>If you have any questions don't hesitate to reach out!</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:hello@coryandro.com">hello@coryandro.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    {% endblock %}
+{% endblock %}
 {% endblock %}
 {% block page_js %}
     <!-- Plugin JavaScript -->
