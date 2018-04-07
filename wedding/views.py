@@ -18,3 +18,6 @@ def why(request):
 
 def how(request):
     return render(request, 'how.html')
+
+def wedding_party(request):
+    return render(request, 'wedding-party.html')
