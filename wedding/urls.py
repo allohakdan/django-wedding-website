@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^when/$', views.when, name='when'),
     url(r'^where/$', views.where, name='where'),
     url(r'^why/$', views.why, name='why'),
-    url(r'^how/$', views.how, name='how')
+    url(r'^how/$', views.how, name='how'),
+    url(r'^wedding-party/$', views.wedding_party, name='wedding-party')
 ]

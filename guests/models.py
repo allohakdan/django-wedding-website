@@ -7,11 +7,8 @@ from django.dispatch import receiver
 
 # these will determine the default formality of correspondence
 ALLOWED_TYPES = [
-    ('formal', 'formal'),
     ('fun', 'fun'),
-    ('dimagi', 'dimagi'),
 ]
-
 
 def _random_uuid():
     return uuid.uuid4().hex
@@ -55,10 +52,8 @@ class Party(models.Model):
 
 
 MEALS = [
-    ('beef', 'cow'),
-    ('fish', 'fish'),
-    ('hen', 'hen'),
-    ('vegetarian', 'vegetable'),
+    ('meat', 'meat'),
+    ('vegetarian', 'vegetarian')
 ]
 
 
