@@ -12,8 +12,6 @@ from guests import csv_import
 from guests.invitation import get_invitation_context, INVITATION_TEMPLATE, guess_party_by_invite_id_or_404, \
     send_invitation_email
 from guests.models import Guest, MEALS, Party
-from guests.save_the_date import get_save_the_date_context, send_save_the_date_email, SAVE_THE_DATE_TEMPLATE, \
-    SAVE_THE_DATE_CONTEXT_MAP
 
 
 class GuestListView(ListView):
@@ -124,28 +122,8 @@ def invitation_email_preview(request, invite_id):
 @login_required
 def invitation_email_test(request, invite_id):
     party = guess_party_by_invite_id_or_404(invite_id)
-    send_invitation_email(party, recipients=['cory.zue@gmail.com'])
+    send_invitation_email(party, recipients=['crosson.brooks@gmail.com'])
     return HttpResponse('sent!')
-
-
-def save_the_date_random(request):
-    template_id = random.choice(SAVE_THE_DATE_CONTEXT_MAP.keys())
-    return save_the_date_preview(request, template_id)
-
-
-def save_the_date_preview(request, template_id):
-    context = get_save_the_date_context(template_id)
-    context['email_mode'] = False
-    return render(request, SAVE_THE_DATE_TEMPLATE, context=context)
-
-
-@login_required
-def test_email(request, template_id):
-    context = get_save_the_date_context(template_id)
-    send_save_the_date_email(context, ['cory.zue@gmail.com'])
-    # send_save_the_date_email(context, ['cory.zue@gmail.com', 'rowenaluk@gmail.com'])
-    return HttpResponse('sent!')
-
 
 def _base64_encode(filepath):
     with open(filepath, "rb") as image_file:
