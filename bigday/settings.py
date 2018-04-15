@@ -126,7 +126,12 @@ EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT=587
 EMAIL_HOST_USER="crosson.brooks@gmail.com"
-EMAIL_HOST_PASSWORD=str(os.environ['GMAILPASS'])
+try:
+    with open(os.path.join(BASE_DIR,".gmailpass")) as f:
+        EMAIL_HOST_PASSWORD=f.readline()
+except:
+    EMAIL_HOST_PASSWORD=""
+    print "ERROR: Please set password in .gmailpass in project root."
 DEFAULT_EMAIL_FROM = "crosson.brooks@gmail.com"
 
 
