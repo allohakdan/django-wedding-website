@@ -25,7 +25,7 @@ def guess_party_by_invite_id_or_404(invite_id):
 def get_invitation_context(party):
     return {
         'title': "Lion's Head",
-        'main_image': 'bride-groom.png',
+        'main_image': 'FullPoster.png',
         'main_color': '#fff3e8',
         'font_color': '#666666',
         'page_title': "Vicki and Dan - You're Invited!",
