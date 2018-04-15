@@ -25,7 +25,7 @@ SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','chimaera.local','viccro.org','69.164.194.71']
 
 
 # Application definition
@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join('bigday', 'templates'),
+            os.path.join(BASE_DIR, 'bigday', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,7 +126,12 @@ EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT=587
 EMAIL_HOST_USER="crosson.brooks@gmail.com"
-EMAIL_HOST_PASSWORD=str(os.environ['GMAILPASS'])
+try:
+    with open(os.path.join(BASE_DIR,".gmailpass")) as f:
+        EMAIL_HOST_PASSWORD=f.readline()
+except:
+    EMAIL_HOST_PASSWORD=""
+    print "ERROR: Please set password in .gmailpass in project root."
 DEFAULT_EMAIL_FROM = "crosson.brooks@gmail.com"
 
 
