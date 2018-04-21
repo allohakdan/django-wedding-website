@@ -4,6 +4,17 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+:root {
+    --color-yellow:#ffcc31;
+    --color-gray:#50514f;
+    --color-orange:#f25e27;
+    --color-blue:#247ba0;
+    --color-red:#f25f5c;
+    --color-teal:#70b1c3;
+    --color-white:#fff;
+    --color-alt-background:#ffdd00;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1097,7 +1108,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: var(--color-blue);
   text-decoration: none;
 }
 a:hover,
@@ -1388,7 +1399,7 @@ a.bg-success:focus {
   background-color: #c1e2b3;
 }
 .bg-info {
-  background-color: #d9edf7;
+  background-color: color: var(--color-alt-background);
 }
 a.bg-info:hover,
 a.bg-info:focus {
@@ -2389,7 +2400,7 @@ table th[class*="col-"] {
 .table > thead > tr.info > th,
 .table > tbody > tr.info > th,
 .table > tfoot > tr.info > th {
-  background-color: #d9edf7;
+  background-color: #var(--color-alt-background);
 }
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
@@ -5071,7 +5082,7 @@ a.thumbnail.active {
 }
 .alert-info {
   color: #31708f;
-  background-color: #d9edf7;
+  background-color: #var(--color-alt-background);
   border-color: #bce8f1;
 }
 .alert-info hr {
@@ -5357,7 +5368,7 @@ button.list-group-item-success.active:focus {
 }
 .list-group-item-info {
   color: #31708f;
-  background-color: #d9edf7;
+  background-color: #var(--color-alt-background);
 }
 a.list-group-item-info,
 button.list-group-item-info {
@@ -5744,14 +5755,14 @@ button.list-group-item-danger.active:focus {
 }
 .panel-info > .panel-heading {
   color: #31708f;
-  background-color: #d9edf7;
+  background-color: #var(--color-alt-background);
   border-color: #bce8f1;
 }
 .panel-info > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #bce8f1;
 }
 .panel-info > .panel-heading .badge {
-  color: #d9edf7;
+  color: #var(--color-alt-background);
   background-color: #31708f;
 }
 .panel-info > .panel-footer + .panel-collapse > .panel-body {
