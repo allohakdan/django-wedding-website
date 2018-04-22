@@ -8,7 +8,7 @@ from django.http import Http404
 from django.template.loader import render_to_string
 from guests.models import Party, MEALS
 
-INVITATION_TEMPLATE = 'guests/invite.html'
+INVITATION_TEMPLATE = 'guests/email.html'
 
 
 def guess_party_by_invite_id_or_404(invite_id):
