@@ -72,6 +72,9 @@ def invitation(request, invite_id):
             guest.is_attending = response.is_attending
             guest.meal = response.meal
             guest.save()
+        if request.POST.get('dietaryRestrictions'):
+            dietaryRestrictions = request.POST.get('dietaryRestrictions')
+            party.comments = dietaryRestrictions if not party.comments else '{}; {}'.format(party.comments, dietaryRestrictions)
         if request.POST.get('comments'):
             comments = request.POST.get('comments')
             party.comments = comments if not party.comments else '{}; {}'.format(party.comments, comments)
