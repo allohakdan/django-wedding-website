@@ -8,7 +8,7 @@ from django.http import Http404
 from django.template.loader import render_to_string
 from guests.models import Party, MEALS
 
-INVITATION_TEMPLATE = 'guests/email.html'
+INVITATION_TEMPLATE = 'guests/invite-rsvp.html'
 
 
 def guess_party_by_invite_id_or_404(invite_id):
@@ -49,7 +49,7 @@ def send_invitation_email(party, test_only=False, recipients=None):
     template_text = "You're invited to Dan and Vicki's wedding. To view this invitation, visit {} in any browser.".format(
         reverse('invitation', args=[context['invitation_id']])
     )
-    subject = "You're invited"
+    subject = "The Wedding of Vicki and Dan - RSVP"
     # https://www.vlent.nl/weblog/2014/01/15/sending-emails-with-embedded-images-in-django/
     msg = EmailMultiAlternatives(subject, template_text, 'Vicki and Dan <crosson.brooks@gmail.com>', recipients,
                                  reply_to=['crosson.brooks@gmail.com'])

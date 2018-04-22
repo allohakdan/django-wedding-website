@@ -31,7 +31,7 @@ except:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1','chimaera.local','viccro.org','69.164.194.71','danandvicki.com','www.danandvicki.com','vickianddan.com','www.vickianddan.com']
 
