@@ -21,7 +21,9 @@ h1 {
 </style>
 <body>
 <div style="text-align: center">
-    <a href="http://vickianddan.com/"><img src="https://raw.githubusercontent.com/allohakdan/django-wedding-website/master/bigday/static/bigday/images/FullPoster.png" height="80%" width="80%"></a>
+    <a href="{% if email_mode %}http://DanAndVicki.com{% endif %}{% url 'invitation' invitation_id %}" target="_blank">
+        <img src="https://raw.githubusercontent.com/allohakdan/django-wedding-website/master/bigday/static/bigday/images/FullPoster.png" height="80%">
+    </a>
 </div>
 <p style="font: 700 20px 'Cardo', sans-serif; text-align: center;">
 Please Join Us In Celebrating The Alliance of 
@@ -41,7 +43,8 @@ Dinner and Dancing to follow!
 <p style="font: 700 20px 'Cardo', sans-serif; text-align: center;">
 Please <b>RSVP by June 1st</b><br/>
 Additional Information at<br/>
-<a href="http://www.vickianddan.com" target="_blank">www.vickianddan.com</a>
+<a href="{% if email_mode %}http://DanAndVicki.com{% endif %}{% url 'invitation' invitation_id %}" target="_blank">
+    www.vickianddan.com</a>
 </p>
 </body>
 </html>
