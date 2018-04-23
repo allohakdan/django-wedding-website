@@ -173,12 +173,24 @@ LOGGING = {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'applogfile': {
+            'level':'WARNING',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'weddingapp.log'),
+            'maxBytes': 1024*1024*15, # 15MB
+            'backupCount': 10,
+        },
     },
     'loggers': {
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['applogfile'],
+            'level': 'WARNING',
             'propagate': True,
         },
     }
