@@ -17,3 +17,12 @@ def how(request):
 
 def wedding_party(request):
     return render(request, 'wedding-party.html')
+
+def family_rehearsal(request):
+    return render(request, 'family-rehearsal.html')
+
+def family(request):
+    return render(request, 'family.html')
+
+def dinner(request):
+    return render(request, 'rehearsal-dinner.html')
