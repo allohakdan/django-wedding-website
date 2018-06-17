@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^rehearsal/$', views.wedding_party, name='wedding-party'),
     url(r'^rehearsal-dinner/$', views.dinner, name='dinner'),
     url(r'^family/$', views.family, name='family'),
-    url(r'^family-rehearsal/$', views.family_rehearsal, name='family-rehearsal')
+    url(r'^family-rehearsal/$', views.family_rehearsal, name='family-rehearsal'),
+    url(r'^vote/$', views.vote, name='vote')
 ]
