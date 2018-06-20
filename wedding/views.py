@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def home(request):
     return render(request, 'home.html')
@@ -26,3 +26,6 @@ def family(request):
 
 def dinner(request):
     return render(request, 'rehearsal-dinner.html')
+
+def vote(request):
+    return redirect("https://docs.google.com/forms/d/e/1FAIpQLSeYlzXYbE0QUkTYdud8poQri-tkWyf4H5-KReFAA3kLa52rcw/viewform?usp=sf_link")
